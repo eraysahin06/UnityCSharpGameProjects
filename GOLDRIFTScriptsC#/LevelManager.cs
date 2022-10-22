@@ -21,30 +21,26 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < levelsUnlocked; i++)
         {
             buttons[i].interactable = true;
-            if ((buttons[1].interactable) == true)
+            if ((buttons[1].interactable))
             {
                 buttons[0].interactable = false;
             }
-            if ((buttons[2].interactable) == true)
+            if ((buttons[2].interactable))
             {
                 buttons[1].interactable = false;
             }
-            if ((buttons[3].interactable) == true)
+            if ((buttons[3].interactable))
             {
                 buttons[2].interactable = false;
             }
-            if ((buttons[4].interactable) == true)
+            if ((buttons[4].interactable))
             {
                 buttons[3].interactable = false;
             }
-            if ((buttons[5].interactable) == true)
+            if ((buttons[5].interactable))
             {
                 buttons[4].interactable = false;
             }
-
-
         }
     }
-
-
 }
