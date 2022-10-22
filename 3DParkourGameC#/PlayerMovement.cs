@@ -1,4 +1,4 @@
-// Some stupid rigidbody based movement by Dani
+// Charactor movement controller by Dani - YouTube.
 
 using System;
 using UnityEngine;
@@ -84,9 +84,6 @@ public class PlayerMovement : MonoBehaviour {
 
     }
 
-    /// <summary>
-    /// Find user input. Should put this in its own class but im lazy
-    /// </summary>
     private void MyInput() {
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
@@ -94,27 +91,18 @@ public class PlayerMovement : MonoBehaviour {
       
     }
 
-
-
     private void Movement() {
         //Extra gravity
-        rb.AddForce(Vector3.down * Time.deltaTime * 10);
-        
+        rb.AddForce(Vector3.down * Time.deltaTime * 10);      
         //Find actual velocity relative to where player is looking
         Vector2 mag = FindVelRelativeToLook();
         float xMag = mag.x, yMag = mag.y;
-
         //Counteract sliding and sloppy movement
-        CounterMovement(x, y, mag);
-        
+        CounterMovement(x, y, mag);        
         //If holding jump && ready to jump, then jump
         if (readyToJump && jumping) Jump();
-
         //Set max speed
-        float maxSpeed = this.maxSpeed;
-        
-
-        
+        float maxSpeed = this.maxSpeed;    
         //If speed is larger than maxspeed, cancel out the input so you don't go over max speed
         if (x > 0 && xMag > maxSpeed) x = 0;
         if (x < 0 && xMag < -maxSpeed) x = 0;
@@ -200,12 +188,6 @@ public class PlayerMovement : MonoBehaviour {
             rb.velocity = new Vector3(n.x, fallspeed, n.z);
         }
     }
-
-    /// <summary>
-    /// Find the velocity relative to where the player is looking
-    /// Useful for vectors calculations regarding movement and limiting movement
-    /// </summary>
-    /// <returns></returns>
     public Vector2 FindVelRelativeToLook() {
         float lookAngle = orientation.transform.eulerAngles.y;
         float moveAngle = Mathf.Atan2(rb.velocity.x, rb.velocity.z) * Mathf.Rad2Deg;
@@ -227,9 +209,6 @@ public class PlayerMovement : MonoBehaviour {
 
     private bool cancellingGrounded;
     
-    /// <summary>
-    /// Handle ground detection
-    /// </summary>
     private void OnCollisionStay(Collision other) {
         //Make sure we are only checking for walkable layers
         int layer = other.gameObject.layer;
