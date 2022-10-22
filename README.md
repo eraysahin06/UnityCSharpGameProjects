@@ -1,6 +1,7 @@
 SOME SCREENSHOTS FROM MY GAMES:
 <hr>
 <img align="center" width="500" src="https://i.ibb.co/0f2SHSq/6.jpg" alt="6" border="0">
+<p align="right">Parkour Game</p>
 <hr>
 <img align="center" width="500" src="https://i.ibb.co/sFm9SJB/7.jpg" alt="7" border="0">
 <hr>
