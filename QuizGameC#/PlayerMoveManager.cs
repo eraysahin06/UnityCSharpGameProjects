@@ -6,13 +6,10 @@ using DG.Tweening;
 public class PlayerMoveManager : MonoBehaviour
 {
     Vector3 whichWay;
-
     Quaternion turnRotation;
-
     Animator anim;
-
     bool isMoving;
-
+    
     private void Awake()
     {
         anim = GetComponent<Animator>();
@@ -28,6 +25,7 @@ public class PlayerMoveManager : MonoBehaviour
 
       
     }
+    
     IEnumerator MovementRoutine(Vector3 targetPos, float latency)
     {
         isMoving = true;
