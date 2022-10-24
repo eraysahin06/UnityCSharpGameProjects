@@ -9,7 +9,5 @@ public class girlLaugh : MonoBehaviour
     {
         myAudio = GetComponent<AudioSource>();
       
-    }
-
-   
+    }  
 }
