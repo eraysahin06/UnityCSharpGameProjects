@@ -4,17 +4,13 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-
     [SerializeField] Transform target;
-
     Vector3 targetDistance;
 
     private void Start()
     {
         targetDistance = transform.position - target.position;
     }
-
-
 
     private void LateUpdate()
     {
