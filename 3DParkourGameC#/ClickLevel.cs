@@ -18,6 +18,4 @@ public class ClickLevel : MonoBehaviour
     {
         pauseMenu.SetActive(false);
     }
-
-
 }
