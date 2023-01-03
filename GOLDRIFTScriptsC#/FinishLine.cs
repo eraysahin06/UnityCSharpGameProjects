@@ -11,7 +11,6 @@ public class FinishLine : MonoBehaviour
     {
         CompleteRace();
     }
-
     public void CompleteRace ()
     {
         goldsText.SetActive(false);
