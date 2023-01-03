@@ -10,7 +10,6 @@ public class FinishLine : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         CompleteRace();
-        
     }
 
     public void CompleteRace ()
